@@ -1,0 +1,540 @@
+body
+{
+	background-color: #FFFFFF;
+	color: black;
+	font-family: Times New Roman;
+	font-size: 12pt;
+}
+/* The width 974px is set for screen size 1024 */
+
+#pagewrap{
+	width: 100%;
+}
+.center
+{
+margin-left:auto;
+margin-right:auto;
+width:974px;
+padding:0px;
+}
+
+.bodyForPublic
+{
+	background-color: #FFFDE7;
+	color: black;
+	font-family: Times New Roman;
+	font-size: 12pt;
+}
+
+.bannerHeader1
+{
+	color: black;
+	font-family: Times New Roman;
+	font-size: 22pt;
+	font-weight: bold;
+}
+
+.bannerHeader2
+{
+	color: black;
+	font-family: Times New Roman;
+	font-size: 11pt;
+}
+
+.bannerUserInfo
+{
+	color: black;
+	font-family: Times New Roman;
+	font-size: 10pt;
+	vAlign=top;
+}
+
+.menu
+{
+	color: #FFFFFF;
+	font-family: Times New Roman;
+	font-weight: bold;
+	font-size: 13pt;
+}
+
+.pageTitle
+{
+	color: rgb(247,105,27);
+	font-family: Times New Roman;
+	font-size: 18pt;
+	font-weight: bold;
+	vertical-align:text-top;
+}
+
+.popTitle
+{
+	color: rgb(247,105,27);
+	font-family: Times New Roman;
+	font-size: 22pt;
+	font-weight: bold;
+	vertical-align:text-top;
+	text-align: center;
+}
+
+.sectionTitle
+{
+	color: #003399;
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.display
+{
+	color: black;
+	font-family: Times New Roman;
+	font-size: 13pt;
+}
+
+.mandatoryLabel
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+}
+
+.optionalLabel
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+}
+
+.label
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	color: rgb(3, 3, 130)
+}
+.mediumLabel
+{
+	font-family: Times New Roman;
+	font-size: 16pt;
+	font-weight: bold;
+	text-align: left;
+	vertical-align:top;
+}
+.bigLabel
+{
+	font-family: Times New Roman;
+	font-size: 22pt;
+	font-weight: bold;
+	text-align: left;
+	vertical-align:top;
+}
+.bigLabelAlignCenter
+{
+	font-family: Times New Roman;
+	font-size: 22pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align:top;
+}
+.mediumLabelAlignCenter
+{
+	font-family: Times New Roman;
+	font-size: 16pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align:top;
+}
+.labelAlignLeft
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+	vertical-align:middle;
+}
+.labelAlignCenter
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	vertical-align:middle;
+}
+.labelAlignRight
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: right;
+	vertical-align:middle;
+}
+.labelAlignRightTop
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: right;
+	vertical-align:top;
+}
+
+.normalUnderlineLabel
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+    text-decoration: underline
+}
+
+.underlineLabel
+{
+	font-family: Times New Roman;
+	font-size: 16pt;
+	font-weight: bold;
+    text-decoration: underline
+}
+
+.mediumUnderlineLabel
+{
+	font-family: Times New Roman;
+	font-size: 16pt;
+	font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.bigUnderlineLabel
+{
+	font-family: Times New Roman;
+	font-size: 22pt;
+	font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.underlineLabelAlignCenter
+{
+	font-family: Times New Roman;
+	font-size: 18pt;
+	font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+.smallerLabel
+{
+	font-family: Times New Roman;
+	font-size: 11pt;
+   	font-weight: normal;
+}
+
+.text
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+	text-align: left;	
+	vertical-align:top;
+}
+
+input
+{
+	font-family: Times New Roman;
+	font-size: 12pt;
+}
+
+.bigText
+{
+	font-family: Times New Roman;
+	font-size: 22pt;
+	text-align: left;
+}
+
+.mediumText
+{
+	font-family: Times New Roman;
+	font-size: 16pt;
+	text-align: left;
+}
+
+textarea{
+	font-family:Times New Roman, Sans-Serif;
+	font-size: 12pt;
+}
+
+.textReadOnly
+{
+	background-color: #D3D3D3;
+	font-family: Times New Roman;
+	font-size: 12pt;
+}
+.errorText
+{
+  color: red;
+  font-family: Times New Roman;
+  font-size: 12pt;
+  font-weight: bold;
+}
+.msgText
+{
+  color: blue;
+  font-family: Times New Roman;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.alertMsgText
+{
+  color: red;
+  font-family: Times New Roman;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.dropDown
+{
+	color: black;
+	font-family: Times New Roman;
+	font-size: 12pt;
+}
+
+.dropDownReadOnly
+{
+	background-color: #D3D3D3;
+	font-family: Times New Roman;
+	font-size: 12pt;
+}
+
+.button
+{
+	color: black;
+	font-family: Times New Roman;
+	font-size: 12pt;
+}
+
+/* 	for the comboBox's button size or use jquery.ui.button.css '.ui-button-icon-only'*/
+span.comboBoxButton
+{
+	width: 15.5pt;
+	height: 15.5pt;
+	vertical-align:top;
+}	
+
+/* 
+	for the comboBox's option list length,
+	please config in jquery.ui.autocomplete.css '.ui-autocomplete'
+
+*/
+
+.listTableBackground
+{
+	background-color: #87CEEB;
+	border-color: #9EE2F3;
+	border-width: 2pt;
+	table-layout: fixed;
+	overflow: hidden;
+}
+
+.listTableHeaderBackground
+{
+	background-color: #87CEEB;
+	border-color: #9EE2F3;
+	border-top-width: 0pt;
+	border-bottom-width: 2pt;
+	border-bottom-color: #20B2AA;
+	border-left-width: 0pt;
+	border-right-width: 0pt;
+}
+
+.listTableCellBackground
+{
+	background-color: #ECF5FF;
+	border-top-width: 0pt;
+	border-bottom-width: 0pt;
+	border-left-width: 0pt;
+	border-right-width: 0pt;
+}
+
+
+.listTable
+{
+	font-size: 10pt;
+	table-layout: fixed;
+	overflow: hidden;
+}
+
+.listTableHeaderRow
+{
+	background-color: #FFE1FF;
+}
+
+.listTableHeaderCell
+{
+	background-color: #B0C4DE;
+	font-size: 12pt;
+	vertical-align: bottom;
+}
+
+.listTableRowOdd
+{
+	background-color: #FFDECA;
+	border-color: #CCCCCC
+}
+
+.listTableRowEven
+{
+	background-color: #FFEEBB;
+	border-color: #CCCCCC
+}
+
+.listTableCell
+{
+	background: #FFFFFF;
+	font-size: 11pt;
+}
+
+.listTablePaging
+{
+	font-size: 10pt;
+}
+
+a:link
+{
+	text-decoration: underline;
+}
+
+a:active,a:visited
+{
+	text-decoration: underline;
+}
+
+a:hover
+{
+	text-decoration: underline;
+	color : #FF3030;
+}
+
+.tabRegion
+{
+	border: 1 solid #BB3333;
+}
+
+.appTitle
+{
+	background-color: BB3333;
+	width: 170px;
+	height: 25px;
+	text-decoration: bold;
+	text-align:center; 
+	vertical-align: middle;
+	font-size: 16pt;
+	font-family: Times New Roman;
+	font-weight: bold;
+	color: white;
+}
+
+.tab
+{
+	background-color: BB3333;
+	width: 300px;
+	height: 20px;
+	text-align:center; 
+	vertical-align: middle;
+	font-size: 12pt;
+	font-family: Times New Roman;
+	color: white;
+}
+
+/* Normal Result Table CSS */
+table.normalResultTable2 {
+	
+}
+
+table.normalResultTable2 th{	
+	background-color: #B0C4DE;
+	font-size: 11pt;
+    font-family: Times New Roman;
+	vertical-align: bottom;  
+	border-top: 10px solid #fafaeb;
+	border-bottom: 2px solid #fafaeb;
+	font-weight: bold;
+	text-align: left
+  
+}
+table.normalResultTable2 td {
+	background-color: #DCDCDC;
+	font-family: Times New Roman;
+	font-size: 12pt;
+	vertical-align:middle;
+}
+table.normalResultTable2 thead tr {
+	background-color: #DCDCDC;
+  /*background-color: #fc0;*/
+}
+
+table.normalResultTable2 th.sorted {
+	background-color: #B0C4DE;
+/*	background-color: orange; */
+}
+
+table.normalResultTable2 th a,th a:visited {
+	color: black;
+}
+
+table.normalResultTable2 th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+table.normalResultTable2 th.sorted a,table.normalResultTable th.sortable a {
+  text-decoration : underline;
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+table.normalResultTable2 th.sortable a {
+  text-decoration : underline;
+	background-image: url(../img/arrow_off.png);
+}
+
+table.normalResultTable2 th.order1 a {
+	background-image: url(../img/arrow_down.png);
+}
+
+table.normalResultTable2 th.order2 a {
+	background-image: url(../img/arrow_up.png);
+}
+
+table.normalResultTable2 tr.odd {
+	background-color: #FFDECA;
+	border-color: #CCCCCC
+}
+
+table.normalResultTable2 tr.tableRowEven,table.normalResultTable tr.even {
+	/*background-color: #fea */
+   	background-color: #FFEEBB;
+	border-color: #CCCCCC
+}
+
+/* End of Normal Result Table */
+
+/* Message Area Style */
+.msgbox{
+	overflow: scroll;
+	overflow-x:hidden; 
+	border:2px solid #FFDECA;
+	background-color:white; 
+	WIDTH:100%; 
+	HEIGHT: 50px
+}
+.linePane{
+	border:1px solid #E5E5DC; 
+	padding: 5px;
+}
+
+.siteMap	{
+	bottom:5px;
+}

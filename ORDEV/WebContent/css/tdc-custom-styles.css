@@ -1,0 +1,94 @@
+.tdc-combobox-div-eventProject, .tdc-textfield-eventWinsProjCode, .tdc-textfield-eventWinsSubProjCode,
+.tdc-combobox-div-eventLocation, .tdc-textfield-eventLocationOthers, .tdc-date-eventPeriod {
+	float: left;
+	margin-right: 15px;
+}
+
+.tdc-label-div-eventYear {
+	float: left;
+	margin-right: 15px;
+	width: 125px;
+	padding-bottom: 15px;
+}
+.tdc-label-div-eventStatus {
+	float: left;
+	width: 250px;	
+}
+.tdc-textfield-regSeqNoFrom, .tdc-combobox-div-badgeScheme {
+	float: left;
+}
+
+.tdc-combobox-div-eventProject .tdc-combobox-label {
+	width: 65px;
+	text-align: left;
+}
+.tdc-combobox-div-eventProject .custom-combobox-input {
+	width: 400px;
+}
+.tdc-combobox-div-eventProject .tdc-select {
+	padding-right: 60px;
+}
+
+.tdc-label-div-eventYear .tdc-label-title, .tdc-label-div-eventStatus .tdc-label-title {
+	width: 50px;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.tdc-textfield-eventWinsProjCode .tdc-textfield-label {
+	width: 250px;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;
+}
+.tdc-textfield-eventWinsProjCode .tdc-textfield-div {
+	width: 50px;
+}
+
+.tdc-textfield-eventWinsSubProjCode .tdc-textfield-label {
+	width: 1px;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;
+}
+.tdc-textfield-eventWinsSubProjCode .tdc-textfield-div {
+	width: 20px;
+}
+
+.tdc-combobox-div-eventLocation .tdc-combobox-label {
+	width: 200px;
+}
+.tdc-combobox-div-eventLocation .custom-combobox-input {
+	width: 145px;
+}
+.tdc-combobox-div-eventLocation .tdc-select {
+	padding-right: 15px;
+}
+.tdc-textfield-input-eventLocationOthers {
+	width: 300px;
+	margin: 0px;
+	padding: 1.5px;
+}
+
+.tdc-date-eventPeriod .tdc-textfield-label {
+	width: auto;
+}
+
+.tdc-textfield-regSeqNoFrom .tdc-textfield-div, 
+.tdc-combobox-div-badgeScheme .tdc-select {
+	vertical-align: top;
+}
+
+.tdc-combobox-div-badgeScheme .custom-combobox {
+	margin-right: 20px;
+}
+
+.tdc-label-div-importDatesNote .tdc-label-title {
+	width: auto;
+	padding: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.clearBoth { clear:both; }

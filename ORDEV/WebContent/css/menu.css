@@ -1,0 +1,82 @@
+/* --- menu styles ---
+note:
+	not all browsers render styles the same way so try out your style sheet
+	on different browsers before publishing;
+*/
+/* level 0 inner */
+.m0l0iout {
+	font-family: Tahoma, Verdana;
+	font-size: 11px;
+	text-decoration: none;
+	padding: 1px;
+	color: #FFFFFF;
+}
+.m0l0iover {
+	font: bold 11px Tahoma, Verdana;
+	text-decoration: none;
+	padding: 1px;
+	color: #FFFFFF;
+}
+
+/* level 0 outer */
+.m0l0oout {
+	text-decoration : none;
+	border : none;
+	background: #4682B4;
+}
+.m0l0oover {
+	text-decoration : none;
+	border : none;
+	background: #4682B4;
+}
+
+/* level 1 inner */
+.m0l1iout {
+	font: 9px Verdana, Tahoma ;
+	text-decoration: none;
+	padding: 1px;
+	color: #000000;
+}
+.m0l1iover {
+	font:  9px Verdana, Tahoma ;
+	text-decoration : none;
+	padding: 1px;
+	color: #FDFD00;
+}
+
+/* level 1 outer */
+.m0l1oout {
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #8AB1D2;
+}
+.m0l1oover {
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #8AB1D2;
+}
+
+/* level 2 inner */
+.m0l2iover {
+	font: 9px Verdana, Tahoma;
+	text-decoration : none;
+	padding: 1px;
+	color: #FDFD00;
+}
+
+/* level 2 outer */
+.m0l2oout {
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #A9C7DE;
+}
+.m0l2oover {
+	text-decoration : none;
+	border : 1px solid #FFFFFF;
+	background: #A9C7DE;
+}
+
+	A.menu:link, A.menu:visited
+		{color: #ffffff; text-decoration: none; font-family: Tahoma, Verdana; font-size: 11px;}
+	A.menu:hover
+		{color: #ffffff; text-decoration: none; font-weight: bold; font-family: Tahoma, Verdana; font-size: 11px;}

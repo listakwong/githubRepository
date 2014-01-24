@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xsi:schemaLocation="  
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd  
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="username" value="ocrs2"/>
+		<property name="password" value="ocrs2012"/>
+		<property name="maxActive" value="10" />
+	</bean>
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource"/>
+		</property>
+		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.connection.autocommit">false</prop> 
+				<prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
+				<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>com.list.or.bean.admin.LoginUser</value>
+				<value>com.list.or.bean.admin.SysUser</value>
+				<value>com.list.or.bean.admin.SysUserGroup</value>
+				<value>com.list.or.bean.admin.SysParameter</value>
+				
+				<value>com.list.or.bean.maint.BankAccount</value>
+				<value>com.list.or.bean.maint.VenueType</value>
+				<value>com.list.or.bean.maint.OctopusServiceType</value>
+				<value>com.list.or.bean.maint.MailingList</value>
+				<value>com.list.or.bean.maint.RevenueItem</value>
+				
+				<value>net.tak.bean.system.SysFunctionRight</value>
+				<value>net.tak.bean.system.SysMenu</value>
+				<value>net.tak.bean.system.SysCode</value>
+				<value>net.tak.bean.system.SysCodeType</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<!-- model bean -->
+	<bean id="sysUser" class="com.list.or.bean.admin.SysUser"/>
+	<bean id="sysUserGroup" class="com.list.or.bean.admin.SysUserGroup"/>
+	<bean id="octopusServiceType" class="com.list.or.bean.maint.OctopusServiceType"/>
+	<bean id="bankAccount" class="com.list.or.bean.maint.BankAccount"/>
+	<bean id="venueType" class="com.list.or.bean.maint.VenueType"/>
+	<bean id="mailingList" class="com.list.or.bean.maint.MailingList"/>
+	<bean id="revenueItem" class="com.list.or.bean.maint.RevenueItem"/>
+	<bean id="sysCode" class="net.tak.bean.system.SysCode"/>
+	
+	<!-- dao -->
+	<bean id="systemDao" class="net.tak.dao.impl.SystemDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="sysUserDao" class="com.list.or.dao.admin.impl.SysUserDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="sysParameterDao" class="com.list.or.dao.admin.impl.SysParameterDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="maintOctopusDao" class="com.list.or.dao.maint.impl.MaintOctopusDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="dropDownDao" class="com.list.or.dao.common.impl.DropDownDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="pagingDao" class="com.list.or.dao.common.impl.PagingDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	<!-- service -->
+	<bean id="sysUserService" class="com.list.or.service.admin.impl.SysUserServiceImpl">
+		<property name="sysUserDao">
+			<ref local="sysUserDao"/>
+		</property>
+		<property name="systemDao">
+			<ref local="systemDao"/>
+		</property>
+		<property name="sysParameterDao">
+			<ref local="sysParameterDao"/>
+		</property>
+	</bean>
+	<bean id="systemService" class="net.tak.service.impl.SystemServiceImpl">
+		<property name="systemDao">
+			<ref local="systemDao"/>
+		</property>
+	</bean>
+	<bean id="sysParameterService" class="com.list.or.service.admin.impl.SysParameterServiceImpl">
+		<property name="sysParameterDao">
+			<ref local="sysParameterDao"/>
+		</property>
+	</bean>
+	<bean id="maintOctopusService" class="com.list.or.service.maint.impl.MaintOctopusServiceImpl">
+		<property name="maintOctopusDao">
+			<ref local="maintOctopusDao"/>
+		</property>
+	</bean>
+	<bean id="dropDownService" class="com.list.or.service.common.impl.DropDownServiceImpl">
+		<property name="dropDownDao">
+			<ref local="dropDownDao"/>
+		</property>
+	</bean>
+	<bean id="pagingService" class="com.list.or.service.common.impl.PagingServiceImpl">
+		<property name="pagingDao">
+			<ref local="pagingDao"/>
+		</property>
+	</bean>
+	
+	<!-- action -->
+	<bean id="baseAction" scope="prototype" class="net.tak.action.BaseAction">
+		<property name="sysUserService">
+			<ref local="sysUserService"/>
+		</property>
+		<property name="systemService">
+			<ref local="systemService"/>
+		</property>
+		<property name="sysParameterService">
+			<ref local="sysParameterService"/>
+		</property>
+		<property name="maintOctopusService">
+			<ref local="maintOctopusService"/>
+		</property>
+	</bean>
+	<!-- adivce -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="transactionIntercepter" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="validateUser">PROPAGATION_REQUIRED</prop>
+				<prop key="retrieve*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,-java.lang.Exception</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="ProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<list>
+				<value>*Service</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>transactionIntercepter</value>
+			</list>
+		</property>
+	</bean>
+</beans>  

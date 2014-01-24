@@ -1,0 +1,108 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<!-- 	<constant name="struts.devMode" value="true" /> -->
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.custom.i18n.resources" value="applicationResources,tak,or" />
+	
+	<package name="default" extends="struts-default">
+		<global-results>
+			<result name="login" type="redirectAction">
+				<param name="namespace">/login</param>
+				<param name="actionName">login</param>
+	        </result>
+		</global-results>
+	</package>
+	
+	<package namespace="/login" name="login" extends="default">
+		<action name="login!*" class="com.list.or.action.LoginAction" method="{1}">
+			<result name="input">/login.jsp</result>
+			<result name="error">/login.jsp</result>
+<!-- 			<result>/common/siteMap.jsp</result> -->
+			<result type="redirect">../common/siteMap</result>
+		</action>
+		<action name="logout!*" class="com.list.or.action.LogoutAction" method="{1}">
+<!-- 			<result>/login.jsp</result> -->
+			<result type="redirect">..</result>
+		</action>
+		<action name="forgetPassword!*" class="com.list.or.action.common.ForgotPasswordAction" method="{1}">
+			<result name="input">/common/forgotPassword.jsp</result>
+			<result>/common/forgotPassword.jsp</result>
+			<result name="back">/login.jsp</result>
+		</action>
+		<action name="changePassword!*" class="com.list.or.action.common.ChangePasswordAction" method="{1}">
+			<result name="input">/common/changePassword.jsp</result>
+			<result>/common/changePassword.jsp</result>
+		</action>
+		<action name="template!*" class="com.list.or.action.TemplateUIAction" method="{1}">
+			<result name="input">/templateUI.jsp</result>
+			<result>/templateUI.jsp</result>
+		</action>
+	</package>
+	<package namespace="/common" name="siteMap" extends="default">
+		<action name="siteMap!*" class="com.list.or.action.common.SiteMapAction" method="{1}">
+			<result name="input">/common/siteMap.jsp</result>
+			<result>/common/siteMap.jsp</result>
+		</action>
+	</package>
+	<package namespace="/user" name="user" extends="default">
+		<action name="enquire!*" class="com.list.or.action.admin.EnquireUserAccountAction" method="{1}">
+			<result name="input">/admin/enquireUserAccount.jsp</result>
+			<result>/admin/enquireUserAccount.jsp</result>
+		</action>
+		<action name="maint!*" class="com.list.or.action.admin.MaintUserAccountAction" method="{1}">
+			<result name="input">/admin/maintUserAccount.jsp</result>
+			<result>/admin/maintUserAccount.jsp</result>
+		</action>
+	</package>
+	<package namespace="/userGroup" name="userGroup" extends="default">
+		<action name="enquire!*" class="com.list.or.action.admin.EnquireUserGroupAction" method="{1}">
+			<result name="input">/admin/enquireUserGroup.jsp</result>
+			<result>/admin/enquireUserGroup.jsp</result>
+		</action>
+		<action name="maint!*" class="com.list.or.action.admin.MaintUserGroupAction" method="{1}">
+			<result name="input">/admin/maintUserGroup.jsp</result>
+			<result>/admin/maintUserGroup.jsp</result>
+		</action>
+	</package>
+	<package namespace="/admin" name="admin" extends="default">
+		<action name="parameter!*" class="com.list.or.action.admin.MaintSysParameterAction" method="{1}">
+			<result name="input">/admin/maintSysParameter.jsp</result>
+			<result>/admin/maintSysParameter.jsp</result>
+		</action>
+	</package>
+	<package namespace="/bankAccount" name="bankAccount" extends="default">
+		<action name="enquire!*" class="com.list.or.action.maint.EnquireBankAccountAction" method="{1}">
+			<result name="input">/maint/enquireBankAccount.jsp</result>
+			<result>/maint/enquireBankAccount.jsp</result>
+		</action>
+		<action name="maint!*" class="com.list.or.action.maint.MaintBankAccountAction" method="{1}">
+			<result name="input">/maint/maintBankAccount.jsp</result>
+			<result>/maint/maintBankAccount.jsp</result>
+		</action>
+	</package>
+	<package namespace="/venueType" name="venueType" extends="default">
+		<action name="enquire!*" class="com.list.or.action.maint.EnquireVenueTypeAction" method="{1}">
+			<result name="input">/maint/enquireVenueType.jsp</result>
+			<result>/maint/enquireVenueType.jsp</result>
+		</action>
+		<action name="maint!*" class="com.list.or.action.maint.MaintVenueTypeAction" method="{1}">
+			<result name="input">/maint/maintVenueType.jsp</result>
+			<result>/maint/maintVenueType.jsp</result>
+		</action>
+	</package>
+	<package namespace="/octopusService" name="octopusService" extends="default">
+		<action name="enquire!*" class="com.list.or.action.maint.EnquireOctopusServiceAction" method="{1}">
+			<result name="input">/maint/enquireOctopusService.jsp</result>
+			<result>/maint/enquireOctopusService.jsp</result>
+		</action>
+		<action name="maint!*" class="com.list.or.action.maint.MaintOctopusServiceAction" method="{1}">
+			<result name="input">/maint/maintOctopusService.jsp</result>
+			<result>/maint/maintOctopusService.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>
